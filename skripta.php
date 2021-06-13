@@ -48,12 +48,12 @@
                 $arhiva = 0;
             }
 
-            $target_dir = 'img/';
+            $target = 'img/'.$slika;
             
 
             $query3 = "UPDATE vijesti SET naslov = '$naslov', about = '$about', sadrzaj = '$sadrzaj',
             slika = '$slika', kategorija = '$kategorija', arhiva = '$arhiva' WHERE id = $id ";
-            move_uploaded_file($_FILES["slika"]["tmp_name"] ?? "", $target_dir.$slika) ;
+            move_uploaded_file($_FILES["slika"]["tmp_name"] ?? "", $target) ;
             $result = mysqli_query($dbc, $query3) or die('Error querying database');
            
     }

@@ -138,25 +138,17 @@ if (isset($_POST['posalji2'])) {
                 </form>';
         }
     } else if ($uspjesnaPrijava == true && $admin == false) {
-        echo 'Bok' . $imeKorisnika . '! Uspješno ste prijavljeni, ali niste administrator.';
+        echo 'Bok ' . $imeKorisnika . '! Uspješno ste prijavljeni, ali niste administrator.';
+        echo '<div style="margin-top:760px;"></div>';
     } else if (isset($_SESSION['$username']) && $_SESSION['$level'] == 0) {
-        echo 'Bok' . $_SESSION['$username'] . '! Uspješno ste prijavljeni, ali niste admin';
+        echo 'Bok ' . $_SESSION['$username'] . '! Uspješno ste prijavljeni, ali niste admin';
+        echo '<div style="margin-top:760px;"></div>';
     } else if ($uspjesnaPrijava == false) {
         $msg = '';
         echo '<div class="wrapper gornji" style="margin-top:15px; margin-bottom:130px;">
                 <div>
-                    <form name="forma" class="forma" action="" method="POST">
-                        <div>
-                            <label for="ime">Vaše ime:</label><br>
-                            <input id="ime" type="text" name="ime">
-                            <br><span class="error" id="porukaIme"><br>
-                        </div>
-                        <div>
-                            <label for="prezime">Vaše prezime:</label><br>
-                            <input type="text" name="prezime" id="prezime">
-                            <br><span class="error" id="porukaPrezime"><br>
-                        </div>
-                        <div>
+                    <form style="margin-bottom:376px;" name="forma" class="forma" action="" method="POST">
+                        <div> 
                             <label for="korisnicko">Vaše korisničko ime:</label><br>
                             <input type="text" name="korisnicko" id="korisnicko">
                             <br><span class="error" id="porukaKorisnicko"><br>
@@ -175,18 +167,7 @@ if (isset($_POST['posalji2'])) {
                             <br><span class="error" id="porukaLozinka1"><br>
                         </div>
                         <div>
-                            <label for="razina">Razina:</label><br>
-                            <select id="razina" name="razina">
-                                <option value="" disabled selected></option>
-                                <option value="nula">Administrator</option>
-                                <option value="jedan">Korisnik</option>
-                            </select>
-                            <br><span class="error" id="porukaRazina"><br>
-                        </div>
-
-
-
-
+                        
                         <div>
                             <button type="reset" value="ponisti">Poništi</button>
                             <button id="gumb2" name="posalji2" type="submit" value="prihvati2">Prihvati</button>

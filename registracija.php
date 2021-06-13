@@ -134,8 +134,8 @@ if (isset($_POST['posalji2'])) {
                             <label for="razina">Razina:</label><br>
                             <select id="razina" name="razina">
                                 <option value="" disabled selected></option>
-                                <option value="nula">Administrator</option>
-                                <option value="jedan">Korisnik</option>
+                                <option value="jedan">Administrator</option>
+                                <option value="nula">Korisnik</option>
                             </select>
                             <br><span class="error" id="porukaRazina"><br>
                         </div>
